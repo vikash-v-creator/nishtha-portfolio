@@ -123,7 +123,7 @@ export const Navbar: React.FC<NavbarProps> = ({ isDark, onToggleTheme, activeSec
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               type="button"
-              className="p-2 rounded-lg lg:hidden text-[#181A18] dark:text-[#F2F3F1] hover:bg-[#EFEFEA] dark:hover:bg-[#111526] focus:outline-none focus:ring-2 focus:ring-[#A8BE91] dark:focus:ring-[#69E4DB]"
+              className="p-2.5 rounded-xl lg:hidden text-[#181A18] dark:text-[#F2F3F1] hover:bg-[#EFEFEA] dark:hover:bg-[#111526] focus:outline-none focus:ring-2 focus:ring-[#A8BE91] dark:focus:ring-[#69E4DB] min-w-[44px] min-h-[44px] flex items-center justify-center"
               aria-label="Toggle navigation menu"
               aria-expanded={isMobileMenuOpen}
             >
@@ -141,10 +141,10 @@ export const Navbar: React.FC<NavbarProps> = ({ isDark, onToggleTheme, activeSec
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25, ease: 'easeInOut' }}
-            className="lg:hidden bg-[#F7F7F2]/95 dark:bg-[#080B19]/95 backdrop-blur-xl border-b border-[#E5E7DF] dark:border-[#1E2538] px-6 py-6 overflow-hidden"
+            className="lg:hidden bg-[#F7F7F2]/95 dark:bg-[#080B19]/95 backdrop-blur-xl border-b border-[#E5E7DF] dark:border-[#1E2538] px-5 sm:px-6 py-5 overflow-hidden shadow-2xl"
           >
-            <div className="flex flex-col space-y-3">
-              <span className="font-mono text-[10px] tracking-widest text-[#777C78] dark:text-[#A7ADBF] uppercase pb-1 border-b border-[#E5E7DF] dark:border-[#1E2538]">
+            <div className="flex flex-col space-y-2">
+              <span className="font-mono text-[10px] tracking-widest text-[#777C78] dark:text-[#A7ADBF] uppercase pb-2 border-b border-[#E5E7DF] dark:border-[#1E2538]">
                 Navigation Index
               </span>
               {navLinks.map((link) => {
@@ -154,7 +154,7 @@ export const Navbar: React.FC<NavbarProps> = ({ isDark, onToggleTheme, activeSec
                     key={link.id}
                     onClick={() => scrollTo(link.id)}
                     type="button"
-                    className={`flex items-center justify-between text-left py-2 px-3 rounded-lg text-sm font-medium transition-colors ${
+                    className={`flex items-center justify-between text-left py-2.5 px-3.5 rounded-xl text-sm font-medium transition-colors min-h-[44px] ${
                       isActive
                         ? 'bg-[#A8BE91]/20 dark:bg-[#69E4DB]/20 text-[#181A18] dark:text-[#F2F3F1] font-semibold'
                         : 'text-[#777C78] dark:text-[#A7ADBF] hover:text-[#181A18] dark:hover:text-[#F2F3F1]'

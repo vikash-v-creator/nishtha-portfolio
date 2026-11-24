@@ -23,16 +23,16 @@ export const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-24 lg:py-32 relative overflow-hidden border-t border-[#E5E7DF] dark:border-[#1E2538] bg-transparent">
+    <section id="contact" className="py-16 sm:py-24 lg:py-32 relative overflow-hidden border-t border-[#E5E7DF] dark:border-[#1E2538] bg-transparent">
       {/* Background ambient lighting */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#A8BE91]/15 dark:bg-[#69E4DB]/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header */}
-        <div className="max-w-3xl mb-16">
+        <div className="max-w-3xl mb-12 sm:mb-16">
           <SectionLabel number="07" label="LET'S CONNECT" />
-          <h2 className="editorial-title text-4xl sm:text-5xl lg:text-6xl font-bold text-[#181A18] dark:text-[#F2F3F1] mt-2">
+          <h2 className="editorial-title fluid-section-title font-bold text-[#181A18] dark:text-[#F2F3F1] mt-2">
             Every great journey begins <br />
             <span className="font-serif italic font-normal text-[#8DA674] dark:text-[#69E4DB]">
               with a conversation.
@@ -44,17 +44,17 @@ export const Contact: React.FC = () => {
         </div>
 
         {/* Contact Layout Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-start">
           
           {/* Left Column: Direct Links & Profile Verification */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="p-8 rounded-3xl bg-white/80 dark:bg-[#111526]/80 backdrop-blur-md border border-[#E5E7DF] dark:border-[#1E2538] shadow-lg space-y-6">
+            <div className="p-5 sm:p-8 rounded-2xl sm:rounded-3xl bg-white/80 dark:bg-[#111526]/80 backdrop-blur-md border border-[#E5E7DF] dark:border-[#1E2538] shadow-lg space-y-6">
               
               <div>
                 <span className="font-mono text-[10px] uppercase tracking-widest text-[#6E8557] dark:text-[#69E4DB] font-bold">
                   DIRECT CONTACT CHANNELS
                 </span>
-                <h3 className="font-serif text-2xl font-bold text-[#181A18] dark:text-[#F2F3F1] mt-1">
+                <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#181A18] dark:text-[#F2F3F1] mt-1">
                   Reach Out Directly
                 </h3>
                 <p className="text-xs text-[#777C78] dark:text-[#A7ADBF] mt-1 font-sans">
@@ -63,7 +63,7 @@ export const Contact: React.FC = () => {
               </div>
 
               {/* Email Block */}
-              <div className="p-4 rounded-2xl bg-[#F7F7F2] dark:bg-[#192038] border border-[#E5E7DF] dark:border-[#1E2538] space-y-3">
+              <div className="p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-[#F7F7F2] dark:bg-[#192038] border border-[#E5E7DF] dark:border-[#1E2538] space-y-3">
                 <div className="flex items-center justify-between text-xs font-mono text-[#777C78] dark:text-[#A7ADBF]">
                   <span className="flex items-center space-x-1.5">
                     <Mail size={14} className="text-[#6E8557] dark:text-[#69E4DB]" />
@@ -72,7 +72,7 @@ export const Contact: React.FC = () => {
                   <button
                     onClick={copyEmail}
                     type="button"
-                    className="flex items-center space-x-1 text-[11px] text-[#6E8557] dark:text-[#69E4DB] hover:underline focus:outline-none"
+                    className="flex items-center space-x-1 text-[11px] text-[#6E8557] dark:text-[#69E4DB] hover:underline focus:outline-none p-1"
                   >
                     {copied ? (
                       <>
@@ -97,7 +97,7 @@ export const Contact: React.FC = () => {
 
                 <a
                   href={`mailto:${profileData.contact.email}`}
-                  className="w-full py-2.5 rounded-xl font-mono text-xs font-semibold uppercase tracking-wider bg-[#181A18] hover:bg-[#333] text-white dark:bg-[#F2F3F1] dark:hover:bg-white dark:text-[#080B19] transition-all flex items-center justify-center space-x-2"
+                  className="w-full py-3 rounded-xl font-mono text-xs font-semibold uppercase tracking-wider bg-[#181A18] hover:bg-[#333] text-white dark:bg-[#F2F3F1] dark:hover:bg-white dark:text-[#080B19] transition-all flex items-center justify-center space-x-2 min-h-[44px]"
                 >
                   <span>SEND AN EMAIL</span>
                   <Mail size={14} />
@@ -105,7 +105,7 @@ export const Contact: React.FC = () => {
               </div>
 
               {/* LinkedIn Block */}
-              <div className="p-4 rounded-2xl bg-[#F7F7F2] dark:bg-[#192038] border border-[#E5E7DF] dark:border-[#1E2538] space-y-3">
+              <div className="p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-[#F7F7F2] dark:bg-[#192038] border border-[#E5E7DF] dark:border-[#1E2538] space-y-3">
                 <div className="flex items-center justify-between text-xs font-mono text-[#777C78] dark:text-[#A7ADBF]">
                   <span className="flex items-center space-x-1.5">
                     <Linkedin size={14} className="text-[#6E8557] dark:text-[#69E4DB]" />
@@ -114,7 +114,7 @@ export const Contact: React.FC = () => {
                   <span className="text-[10px] text-[#6E8557] dark:text-[#69E4DB]">Verified Profile</span>
                 </div>
 
-                <div className="font-sans font-semibold text-base text-[#181A18] dark:text-[#F2F3F1]">
+                <div className="font-sans font-semibold text-sm sm:text-base text-[#181A18] dark:text-[#F2F3F1] break-all">
                   linkedin.com/in/nishtha-walia-527b35372
                 </div>
 
@@ -122,7 +122,7 @@ export const Contact: React.FC = () => {
                   href={profileData.contact.linkedIn}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full py-2.5 rounded-xl font-mono text-xs font-semibold uppercase tracking-wider border border-[#A8BE91] dark:border-[#69E4DB] text-[#181A18] dark:text-[#F2F3F1] hover:bg-[#A8BE91]/15 dark:hover:bg-[#69E4DB]/15 transition-all flex items-center justify-center space-x-2 group"
+                  className="w-full py-3 rounded-xl font-mono text-xs font-semibold uppercase tracking-wider border border-[#A8BE91] dark:border-[#69E4DB] text-[#181A18] dark:text-[#F2F3F1] hover:bg-[#A8BE91]/15 dark:hover:bg-[#69E4DB]/15 transition-all flex items-center justify-center space-x-2 group min-h-[44px]"
                 >
                   <span>CONNECT ON LINKEDIN</span>
                   <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -134,13 +134,13 @@ export const Contact: React.FC = () => {
 
           {/* Right Column: Interactive Quick Inquiry Composer */}
           <div className="lg:col-span-7">
-            <div className="p-8 sm:p-10 rounded-3xl bg-white/80 dark:bg-[#111526]/80 backdrop-blur-md border border-[#E5E7DF] dark:border-[#1E2538] shadow-lg space-y-6">
+            <div className="p-5 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl bg-white/80 dark:bg-[#111526]/80 backdrop-blur-md border border-[#E5E7DF] dark:border-[#1E2538] shadow-lg space-y-6">
               <div>
                 <div className="flex items-center space-x-2 text-xs font-mono uppercase tracking-widest text-[#6E8557] dark:text-[#69E4DB] font-semibold mb-1">
                   <MessageSquare size={14} />
                   <span>PRE-COMPOSE AN INQUIRY</span>
                 </div>
-                <h3 className="font-serif text-2xl font-bold text-[#181A18] dark:text-[#F2F3F1]">
+                <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#181A18] dark:text-[#F2F3F1]">
                   Draft a Direct Note
                 </h3>
                 <p className="text-xs sm:text-sm text-[#777C78] dark:text-[#A7ADBF] font-sans mt-1">

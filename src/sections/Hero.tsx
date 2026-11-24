@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowDown, ArrowUpRight, Compass, Dna, Sparkles } from 'lucide-react';
+import { ArrowDown, ArrowUpRight, Dna, Sparkles } from 'lucide-react';
 import { profileData } from '../data/profile';
 
 export const Hero: React.FC = () => {
@@ -15,45 +15,45 @@ export const Hero: React.FC = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-screen pt-28 pb-16 lg:pt-36 lg:pb-24 flex items-center justify-center overflow-hidden"
+      className="relative min-h-[92vh] sm:min-h-screen pt-24 pb-14 sm:pt-32 sm:pb-20 lg:pt-36 lg:pb-24 flex items-center justify-center overflow-hidden bg-transparent"
     >
       {/* Background Editorial Architectural Lines & Subtle Gradients */}
-      <div className="absolute inset-0 pointer-events-none opacity-40 dark:opacity-20 scientific-lines" />
+      <div className="absolute inset-0 pointer-events-none opacity-30 dark:opacity-20 scientific-lines" />
       
       {/* Soft atmospheric ambient glow */}
-      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-[#A8BE91]/20 dark:bg-[#69E4DB]/15 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-10 -right-20 w-[420px] h-[420px] bg-[#D5F27A]/15 dark:bg-[#4F9DCA]/15 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/4 -left-20 sm:-left-32 w-72 sm:w-96 h-72 sm:h-96 bg-[#A8BE91]/20 dark:bg-[#69E4DB]/15 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-10 -right-20 w-72 sm:w-[420px] h-72 sm:h-[420px] bg-[#D5F27A]/15 dark:bg-[#4F9DCA]/15 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
           
           {/* LEFT SIDE: Editorial Typography & Narrative */}
-          <div className="lg:col-span-7 flex flex-col justify-center space-y-6 lg:pr-6">
+          <div className="lg:col-span-7 flex flex-col justify-center space-y-5 sm:space-y-6 lg:pr-6">
             
             {/* Top Micro Badges */}
             <motion.div
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: 'easeOut' }}
-              className="flex flex-wrap items-center gap-2.5"
+              className="flex flex-wrap items-center gap-2 sm:gap-2.5"
             >
-              <span className="font-mono text-[10px] sm:text-[11px] uppercase tracking-[0.22em] text-[#6E8557] dark:text-[#69E4DB] font-bold px-3 py-1 rounded-full border border-[#A8BE91]/40 dark:border-[#69E4DB]/40 bg-[#A8BE91]/10 dark:bg-[#69E4DB]/10">
+              <span className="font-mono text-[9px] sm:text-[11px] uppercase tracking-[0.22em] text-[#6E8557] dark:text-[#69E4DB] font-bold px-2.5 sm:px-3 py-1 rounded-full border border-[#A8BE91]/40 dark:border-[#69E4DB]/40 bg-[#A8BE91]/10 dark:bg-[#69E4DB]/10">
                 HELLO, I'M
               </span>
-              <span className="font-mono text-[10px] sm:text-[11px] uppercase tracking-widest text-[#777C78] dark:text-[#A7ADBF] flex items-center space-x-1.5">
-                <Dna size={13} className="text-[#A8BE91] dark:text-[#69E4DB]" />
+              <span className="font-mono text-[9px] sm:text-[11px] uppercase tracking-wider sm:tracking-widest text-[#777C78] dark:text-[#A7ADBF] flex items-center space-x-1.5">
+                <Dna size={12} className="text-[#A8BE91] dark:text-[#69E4DB] flex-shrink-0" />
                 <span>BIOTECHNOLOGY STUDENT · FIRST SEMESTER</span>
               </span>
             </motion.div>
 
-            {/* Main Editorial Name */}
+            {/* Main Editorial Name with Fluid Clamp */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1, ease: 'easeOut' }}
               className="space-y-1"
             >
-              <h1 className="editorial-title text-6xl sm:text-7xl md:text-8xl lg:text-[6.2rem] xl:text-[7.2rem] font-bold tracking-tight text-[#181A18] dark:text-[#F2F3F1] leading-[0.9]">
+              <h1 className="fluid-hero-title font-bold tracking-tight text-[#181A18] dark:text-[#F2F3F1]">
                 NISHTHA <br />
                 <span className="text-[#8DA674] dark:text-[#69E4DB] font-normal italic font-serif">
                   WALIA.
@@ -66,14 +66,14 @@ export const Hero: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.2, ease: 'easeOut' }}
-              className="border-l-2 border-[#A8BE91] dark:border-[#69E4DB] pl-4 sm:pl-5 py-1"
+              className="border-l-2 border-[#A8BE91] dark:border-[#69E4DB] pl-3.5 sm:pl-5 py-1"
             >
-              <p className="font-serif italic text-xl sm:text-2xl text-[#181A18]/90 dark:text-[#F2F3F1]/90 leading-snug">
+              <p className="font-serif italic text-lg sm:text-2xl text-[#181A18]/90 dark:text-[#F2F3F1]/90 leading-snug">
                 "Curiosity in mind. <br className="hidden sm:inline" />
                 Creativity in soul. <br className="hidden sm:inline" />
                 Science in pursuit."
               </p>
-              <div className="mt-1 text-[11px] font-mono tracking-wider uppercase text-[#777C78] dark:text-[#A7ADBF]">
+              <div className="mt-1.5 text-[10px] sm:text-[11px] font-mono tracking-wider uppercase text-[#777C78] dark:text-[#A7ADBF]">
                 LOVELY PROFESSIONAL UNIVERSITY · FIRST SEMESTER
               </div>
             </motion.div>
@@ -83,7 +83,7 @@ export const Hero: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.3, ease: 'easeOut' }}
-              className="text-sm sm:text-base text-[#181A18]/80 dark:text-[#F2F3F1]/80 max-w-xl leading-relaxed"
+              className="text-xs sm:text-base text-[#181A18]/80 dark:text-[#F2F3F1]/80 max-w-xl leading-relaxed"
             >
               I'm a Biotechnology student fascinated by genetics, genetic engineering and the endless possibilities of science. Beyond academics, I find inspiration in poetry, books, dance and meaningful conversations.
             </motion.p>
@@ -93,23 +93,23 @@ export const Hero: React.FC = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.7, delay: 0.35 }}
-              className="flex items-center space-x-2 text-[10px] font-mono tracking-widest uppercase text-[#777C78] dark:text-[#A7ADBF]"
+              className="flex items-center space-x-2 text-[9px] sm:text-[10px] font-mono tracking-widest uppercase text-[#777C78] dark:text-[#A7ADBF]"
             >
-              <Sparkles size={12} className="text-[#D5F27A] dark:text-[#C9F66D]" />
+              <Sparkles size={11} className="text-[#D5F27A] dark:text-[#C9F66D] flex-shrink-0" />
               <span>EXPLORING LIFE AT THE MOLECULAR LEVEL</span>
             </motion.div>
 
-            {/* CTA Buttons */}
+            {/* CTA Buttons - Full Width on Mobile with Large Tap Targets */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.4, ease: 'easeOut' }}
-              className="flex flex-wrap items-center gap-4 pt-3"
+              className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2 sm:pt-3"
             >
               <button
                 onClick={() => scrollTo('journey')}
                 type="button"
-                className="px-6 py-3.5 rounded-full font-mono text-xs tracking-wider uppercase font-semibold text-[#181A18] dark:text-[#080B19] bg-[#A8BE91] hover:bg-[#8DA674] dark:bg-[#69E4DB] dark:hover:bg-[#52D4CB] transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 active:translate-y-0"
+                className="w-full sm:w-auto px-6 py-3.5 rounded-full font-mono text-xs tracking-wider uppercase font-semibold text-[#181A18] dark:text-[#080B19] bg-[#A8BE91] hover:bg-[#8DA674] dark:bg-[#69E4DB] dark:hover:bg-[#52D4CB] transition-all duration-200 shadow-md hover:shadow-lg text-center"
               >
                 EXPLORE MY JOURNEY
               </button>
@@ -117,7 +117,7 @@ export const Hero: React.FC = () => {
               <button
                 onClick={() => scrollTo('contact')}
                 type="button"
-                className="px-6 py-3.5 rounded-full font-mono text-xs tracking-wider uppercase font-medium text-[#181A18] dark:text-[#F2F3F1] border border-[#E5E7DF] dark:border-[#1E2538] hover:border-[#A8BE91] dark:hover:border-[#69E4DB] bg-white/70 dark:bg-[#111526]/70 backdrop-blur-sm transition-all duration-200 inline-flex items-center space-x-2 group hover:-translate-y-0.5"
+                className="w-full sm:w-auto px-6 py-3.5 rounded-full font-mono text-xs tracking-wider uppercase font-medium text-[#181A18] dark:text-[#F2F3F1] border border-[#E5E7DF] dark:border-[#1E2538] hover:border-[#A8BE91] dark:hover:border-[#69E4DB] bg-white/70 dark:bg-[#111526]/70 backdrop-blur-sm transition-all duration-200 inline-flex items-center justify-center space-x-2 group"
               >
                 <span>LET'S CONNECT</span>
                 <ArrowUpRight size={14} className="text-[#8DA674] dark:text-[#69E4DB] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -127,26 +127,26 @@ export const Hero: React.FC = () => {
           </div>
 
           {/* RIGHT SIDE: Real Portrait with Editorial & Scientific Treatment */}
-          <div className="lg:col-span-5 flex justify-center items-center relative">
+          <div className="lg:col-span-5 flex justify-center items-center relative pt-4 sm:pt-0">
             <motion.div
               initial={{ opacity: 0, scale: 0.94, filter: 'blur(10px)' }}
               animate={{ opacity: 1, scale: 1, filter: 'blur(0px)' }}
               transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-              className="relative w-full max-w-[390px] sm:max-w-[430px]"
+              className="relative w-full max-w-[310px] sm:max-w-[380px] md:max-w-[420px]"
             >
               
               {/* Scientific Annotation Box Top-Right */}
-              <div className="absolute -top-4 -right-2 z-20 hidden sm:block bg-white/90 dark:bg-[#111526]/90 backdrop-blur-md px-3 py-1.5 rounded-lg border border-[#E5E7DF] dark:border-[#1E2538] shadow-sm text-[10px] font-mono tracking-wider text-[#181A18] dark:text-[#F2F3F1]">
-                <div className="text-[8px] text-[#777C78] dark:text-[#A7ADBF] uppercase">Subject Identification</div>
+              <div className="absolute -top-3 sm:-top-4 -right-1 sm:-right-2 z-20 bg-white/90 dark:bg-[#111526]/90 backdrop-blur-md px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-lg border border-[#E5E7DF] dark:border-[#1E2538] shadow-sm text-[9px] sm:text-[10px] font-mono tracking-wider text-[#181A18] dark:text-[#F2F3F1]">
+                <div className="text-[7px] sm:text-[8px] text-[#777C78] dark:text-[#A7ADBF] uppercase">Subject Identification</div>
                 <div className="font-semibold text-[#6E8557] dark:text-[#69E4DB]">NISHTHA WALIA // 01</div>
               </div>
 
               {/* Molecular Frame Overlay Lines */}
-              <div className="absolute -inset-3 rounded-2xl border border-dashed border-[#A8BE91]/40 dark:border-[#69E4DB]/30 pointer-events-none -z-10" />
-              <div className="absolute -inset-6 rounded-3xl border border-[#E5E7DF]/60 dark:border-[#1E2538]/60 pointer-events-none -z-20" />
+              <div className="absolute -inset-2.5 sm:-inset-3 rounded-2xl border border-dashed border-[#A8BE91]/40 dark:border-[#69E4DB]/30 pointer-events-none -z-10" />
+              <div className="absolute -inset-5 sm:-inset-6 rounded-3xl border border-[#E5E7DF]/60 dark:border-[#1E2538]/60 pointer-events-none -z-20" />
 
               {/* Main Portrait Frame */}
-              <div className="relative rounded-2xl overflow-hidden bg-white dark:bg-[#111526] p-2.5 sm:p-3 shadow-2xl border border-[#E5E7DF] dark:border-[#1E2538] group">
+              <div className="relative rounded-2xl overflow-hidden bg-white dark:bg-[#111526] p-2 sm:p-3 shadow-2xl border border-[#E5E7DF] dark:border-[#1E2538] group">
                 <div className="relative aspect-square w-full rounded-xl overflow-hidden bg-[#EFEFEA] dark:bg-[#192038]">
                   <img
                     src="./images/nishtha-portrait.jpg"
@@ -159,7 +159,7 @@ export const Hero: React.FC = () => {
                 </div>
 
                 {/* Bottom Photo Metadata Caption */}
-                <div className="pt-3 pb-1 px-1 flex items-center justify-between text-[10px] font-mono text-[#777C78] dark:text-[#A7ADBF]">
+                <div className="pt-2.5 pb-0.5 sm:pt-3 sm:pb-1 px-1 flex items-center justify-between text-[9px] sm:text-[10px] font-mono text-[#777C78] dark:text-[#A7ADBF]">
                   <div className="flex items-center space-x-1.5">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#A8BE91] dark:bg-[#69E4DB]"></span>
                     <span>AUTHENTIC PORTRAIT</span>
@@ -169,14 +169,14 @@ export const Hero: React.FC = () => {
               </div>
 
               {/* Floating Scientific Annotation Tag Bottom-Left */}
-              <div className="absolute -bottom-5 -left-3 sm:-left-6 z-20 bg-white/95 dark:bg-[#111526]/95 backdrop-blur-md px-3.5 py-2 rounded-xl border border-[#E5E7DF] dark:border-[#1E2538] shadow-lg text-[10px] font-mono text-[#181A18] dark:text-[#F2F3F1] max-w-[210px]">
-                <div className="text-[#777C78] dark:text-[#A7ADBF] text-[8px] uppercase tracking-wider">Academic Horizon</div>
-                <div className="font-semibold text-[#181A18] dark:text-[#F2F3F1]">Genetics & Bio-Engineering</div>
-                <div className="text-[9px] text-[#8DA674] dark:text-[#69E4DB] mt-0.5">Lovely Professional Univ.</div>
+              <div className="absolute -bottom-4 sm:-bottom-5 -left-2 sm:-left-6 z-20 bg-white/95 dark:bg-[#111526]/95 backdrop-blur-md px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-xl border border-[#E5E7DF] dark:border-[#1E2538] shadow-lg text-[9px] sm:text-[10px] font-mono text-[#181A18] dark:text-[#F2F3F1] max-w-[190px] sm:max-w-[210px]">
+                <div className="text-[#777C78] dark:text-[#A7ADBF] text-[7px] sm:text-[8px] uppercase tracking-wider">Academic Horizon</div>
+                <div className="font-semibold text-[#181A18] dark:text-[#F2F3F1] truncate">Genetics & Bio-Engineering</div>
+                <div className="text-[8px] sm:text-[9px] text-[#8DA674] dark:text-[#69E4DB] mt-0.5">Lovely Professional Univ.</div>
               </div>
 
               {/* Decorative DNA Vector Accent */}
-              <div className="absolute -bottom-8 -right-4 w-16 h-16 pointer-events-none text-[#A8BE91]/30 dark:text-[#69E4DB]/20">
+              <div className="absolute -bottom-6 -right-2 sm:-bottom-8 sm:-right-4 w-12 h-12 sm:w-16 sm:h-16 pointer-events-none text-[#A8BE91]/30 dark:text-[#69E4DB]/20">
                 <svg viewBox="0 0 100 100" fill="currentColor">
                   <circle cx="20" cy="20" r="4" />
                   <circle cx="80" cy="80" r="4" />
@@ -195,10 +195,10 @@ export const Hero: React.FC = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.8, duration: 0.6 }}
-          className="mt-12 lg:mt-16 flex flex-col items-center justify-center space-y-2 cursor-pointer text-[#777C78] dark:text-[#A7ADBF] hover:text-[#181A18] dark:hover:text-[#F2F3F1] transition-colors"
+          className="mt-8 sm:mt-12 lg:mt-16 flex flex-col items-center justify-center space-y-1.5 sm:space-y-2 cursor-pointer text-[#777C78] dark:text-[#A7ADBF] hover:text-[#181A18] dark:hover:text-[#F2F3F1] transition-colors"
           onClick={() => scrollTo('about')}
         >
-          <span className="font-mono text-[10px] uppercase tracking-[0.25em]">Scroll Down</span>
+          <span className="font-mono text-[9px] sm:text-[10px] uppercase tracking-[0.25em]">Scroll Down</span>
           <motion.div
             animate={{ y: [0, 5, 0] }}
             transition={{ repeat: Infinity, duration: 1.8, ease: 'easeInOut' }}

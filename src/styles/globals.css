@@ -32,12 +32,14 @@
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
   }
 
   body {
     background-color: var(--bg-main);
     color: var(--text-primary);
     overflow-x: hidden;
+    width: 100%;
   }
 
   ::selection {
@@ -91,6 +93,20 @@
   font-style: italic;
 }
 
+.fluid-hero-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2.75rem, 9.2vw, 6.8rem);
+  letter-spacing: -0.035em;
+  line-height: 0.92;
+}
+
+.fluid-section-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2.1rem, 5.8vw, 3.8rem);
+  letter-spacing: -0.025em;
+  line-height: 1.05;
+}
+
 .mono-tag {
   font-family: 'Space Mono', monospace;
   font-size: 0.72rem;
@@ -127,6 +143,15 @@
 
 .dark .editorial-border {
   border-color: #1E2538;
+}
+
+/* Hide scrollbar for clean touch horizontal carousels */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 /* Custom cursor hide on touch devices */

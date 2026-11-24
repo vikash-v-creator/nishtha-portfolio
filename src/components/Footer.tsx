@@ -10,12 +10,12 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="border-t border-[#E5E7DF] dark:border-[#1E2538] bg-[#FFFFFF]/60 dark:bg-[#111526]/60 backdrop-blur-sm pt-16 pb-12 transition-colors">
+    <footer className="border-t border-[#E5E7DF] dark:border-[#1E2538] bg-[#FFFFFF]/60 dark:bg-[#111526]/60 backdrop-blur-sm pt-12 sm:pt-16 pb-10 sm:pb-12 transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 items-start pb-12 border-b border-[#E5E7DF] dark:border-[#1E2538]">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-10 items-start pb-8 sm:pb-12 border-b border-[#E5E7DF] dark:border-[#1E2538]">
           {/* Brand & Identity */}
           <div className="md:col-span-5 space-y-4">
-            <div className="flex items-center space-x-3">
+            <div className="flex flex-wrap items-center gap-2.5">
               <span className="font-serif text-2xl font-bold tracking-tight text-[#181A18] dark:text-[#F2F3F1]">
                 {profileData.brandName}
               </span>
@@ -51,11 +51,11 @@ export const Footer: React.FC = () => {
           </div>
 
           {/* Back to top & Actions */}
-          <div className="md:col-span-3 flex flex-col md:items-end justify-between space-y-6">
+          <div className="md:col-span-3 flex flex-col md:items-end justify-between space-y-4 sm:space-y-6">
             <button
               onClick={scrollToTop}
               type="button"
-              className="inline-flex items-center space-x-2 px-4 py-2.5 rounded-full border border-[#E5E7DF] dark:border-[#1E2538] hover:border-[#A8BE91] dark:hover:border-[#69E4DB] bg-white dark:bg-[#111526] text-xs font-mono uppercase tracking-wider text-[#181A18] dark:text-[#F2F3F1] transition-all group shadow-sm"
+              className="inline-flex items-center space-x-2 px-4 py-2.5 rounded-full border border-[#E5E7DF] dark:border-[#1E2538] hover:border-[#A8BE91] dark:hover:border-[#69E4DB] bg-white dark:bg-[#111526] text-xs font-mono uppercase tracking-wider text-[#181A18] dark:text-[#F2F3F1] transition-all group shadow-sm min-h-[40px] w-fit"
               aria-label="Back to top"
             >
               <span>Back to Top</span>
@@ -68,11 +68,11 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Bottom copyright & attribution */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-[#777C78] dark:text-[#A7ADBF] space-y-3 sm:space-y-0">
+        <div className="pt-6 sm:pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-[#777C78] dark:text-[#A7ADBF] space-y-3 sm:space-y-0 text-center sm:text-left">
           <div>
             © {currentYear} Nishtha Walia. All personal rights reserved.
           </div>
-          <div className="flex items-center space-x-1.5 font-mono text-[11px]">
+          <div className="flex flex-wrap items-center justify-center space-x-1.5 font-mono text-[11px]">
             <span>Lovely Professional University</span>
             <span>•</span>
             <span className="text-[#8DA674] dark:text-[#69E4DB]">Biotechnology Department</span>
